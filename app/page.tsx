@@ -1,4 +1,5 @@
 import Hero from './components/Hero';
+import SectionTitle from './components/SectionTitle';
 
 export default function Home() {
   return (
@@ -7,6 +8,58 @@ export default function Home() {
         name="Gilad Bahar"
         role="Computer Science Student & Full-Stack Developer"
       />
+      
+      {/* About Me Section */}
+      <section id="about" className="py-16 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle 
+            label="Get to know me"
+            title="About Me"
+          />
+          <div className="mt-8">
+            {/* Content will be added in future branch */}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-16 px-4 bg-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle 
+            label="My Work"
+            title="Featured Projects"
+          />
+          <div className="mt-8">
+            {/* Content will be added in future branch */}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-16 px-4 bg-gray-900">
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle 
+            label="Technologies"
+            title="Skills & Expertise"
+          />
+          <div className="mt-8">
+            {/* Content will be added in future branch */}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-16 px-4 bg-gray-800">
+        <div className="max-w-4xl mx-auto">
+          <SectionTitle 
+            label="My Journey"
+            title="Experience"
+          />
+          <div className="mt-8">
+            {/* Content will be added in future branch */}
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
