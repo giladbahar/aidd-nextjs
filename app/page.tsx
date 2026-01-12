@@ -1,5 +1,6 @@
 import Hero from './components/Hero';
 import SectionTitle from './components/SectionTitle';
+import AboutMeContent from './components/AboutMeContent';
 
 export default function Home() {
   return (
@@ -16,9 +17,7 @@ export default function Home() {
             label="Get to know me"
             title="About Me"
           />
-          <div className="mt-8">
-            {/* Content will be added in future branch */}
-          </div>
+          <AboutMeContent />
         </div>
       </section>
 
