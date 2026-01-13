@@ -1,6 +1,7 @@
 import Hero from './components/Hero';
 import SectionTitle from './components/SectionTitle';
 import AboutMeContent from './components/AboutMeContent';
+import SkillsContent from './components/SkillsContent';
 
 export default function Home() {
   return (
@@ -41,9 +42,7 @@ export default function Home() {
             label="Technologies"
             title="Skills & Expertise"
           />
-          <div className="mt-8">
-            {/* Content will be added in future branch */}
-          </div>
+          <SkillsContent />
         </div>
       </section>
 
