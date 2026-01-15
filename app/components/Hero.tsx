@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface HeroProps {
   name?: string;
   role?: string;
@@ -11,7 +13,15 @@ export default function Hero({
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 px-4">
       <div className="text-center space-y-6 max-w-2xl">
         {/* Avatar/Icon */}
-        <div className="text-6xl mb-4">🧑‍💻</div>
+        <div className="mb-4 flex justify-center">
+          <Image 
+            src="/images/לינקדין 1.jpg"
+            alt={name}
+            width={190}
+            height={160}
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-top"
+          />
+        </div>
         
         {/* Title */}
         <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
