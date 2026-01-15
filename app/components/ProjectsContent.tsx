@@ -38,12 +38,13 @@ export default function ProjectsContent({ className = "" }: ProjectsContentProps
       videoUrl: "https://youtu.be/V1uJZrT8Piw"
     },
     {
-      id: "ml-project",
-      title: "Machine Learning Project",
-      description: "תיאור הפרויקט - עבודה שקשורה ללמידת מכונה...",
-      technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-      image: "/images/ml-project.jpg", // עדכן עם הנתיב הנכון
-      videoUrl: "#", // עדכן עם קישור סרטון הסבר
+      id: "ml-house-prices",
+      title: "House Price Prediction - ML Project",
+      description: "Final project implementing a complete regression pipeline to predict median house values using California housing data. Features include data preprocessing, exploratory data analysis (EDA) with visualizations, and multiple regression models (Linear, Ridge, Lasso, Random Forest) with GridSearchCV for hyperparameter optimization. Evaluates models using R² scores and provides comprehensive comparison tables.",
+      technologies: ["Python", "Pandas", "NumPy", "Scikit-Learn", "Matplotlib", "Seaborn"],
+      image: "/images/ML Project.jpeg",
+      githubUrl: "https://github.com/giladbahar/ML-Final-Project",
+      videoUrl: "https://www.youtube.com/watch?v=BC3fJ7bLiBA"
     }
   ];
 
