@@ -29,13 +29,13 @@ export default function ProjectsContent({ className = "" }: ProjectsContentProps
       videoUrl: "https://youtu.be/Wt17AULF5s4?si=Q_dZsEm09LRC932L"
     },
     {
-      id: "ai-system",
-      title: "AI System",
-      description: "תיאור הפרויקט - מערכת AI מתקדמת...",
-      technologies: ["Python", "TensorFlow", "React", "Flask"],
-      image: "/images/ai-system.jpg", // עדכן עם הנתיב הנכון
-      githubUrl: "#", // עדכן עם קישור GitHub
-      videoUrl: "#", // עדכן עם קישור סרטון
+      id: "cost-manager-backend",
+      title: "Cost Manager RESTful Web Services",
+      description: "Final project in Asynchronous Server-Side Development course. A RESTful web service for managing costs, organized as 4 microservices: Users Service, Costs Service, Logs Service, and Admin Service. Features include Computed Design Pattern for cached reports, centralized logging with Pino, and microservices architecture with MongoDB.",
+      technologies: ["Node.js", "MongoDB", "REST APIs", "Microservices", "Pino"],
+      githubUrl: "https://github.com/giladbahar/server-side-project",
+      liveUrl: "https://cost-manager-users.onrender.com",
+      videoUrl: "https://youtu.be/V1uJZrT8Piw"
     },
     {
       id: "ml-project",
