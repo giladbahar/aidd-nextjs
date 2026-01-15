@@ -2,6 +2,7 @@ import Hero from './components/Hero';
 import SectionTitle from './components/SectionTitle';
 import AboutMeContent from './components/AboutMeContent';
 import SkillsContent from './components/SkillsContent';
+import ProjectsContent from './components/ProjectsContent';
 
 export default function Home() {
   return (
@@ -29,9 +30,7 @@ export default function Home() {
             label="My Work"
             title="Featured Projects"
           />
-          <div className="mt-8">
-            {/* Content will be added in future branch */}
-          </div>
+          <ProjectsContent />
         </div>
       </section>
 
