@@ -1,4 +1,5 @@
 import { Project } from '../types/project';
+import Image from 'next/image';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,11 +11,13 @@ export default function ProjectCard({ project, className = "" }: ProjectCardProp
     <div className={`bg-gray-800 border border-gray-700 rounded-lg overflow-hidden shadow-lg ${className}`}>
       {/* תמונה */}
       {project.image && (
-        <div className="w-full h-48 overflow-hidden">
-          <img 
+        <div className="w-full h-48 overflow-hidden relative">
+          <Image 
             src={project.image} 
             alt={project.title}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       )}

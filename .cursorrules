@@ -1,0 +1,148 @@
+# Project Rules for aidd-nextjs
+
+## Technology Stack
+- Next.js 16.1.1 with App Router
+- React 19.2.3
+- TypeScript 5 with strict mode
+- Tailwind CSS v4 (via @tailwindcss/postcss)
+
+## Component Guidelines
+
+### Structure
+- Always use TypeScript with strict typing
+- Use functional components (not class components)
+- Define TypeScript interfaces for all component props
+- Use optional props with default values when appropriate
+- Export components as default exports
+- Place all reusable components in `app/components/` directory
+
+### Example Pattern:
+```typescript
+interface ComponentProps {
+  prop1?: string;
+  prop2?: number;
+}
+
+export default function Component({ 
+  prop1 = "default", 
+  prop2 = 0 
+}: ComponentProps) {
+  return (
+    // JSX here
+  );
+}
+```
+
+### Naming
+- Components: PascalCase (e.g., `Hero.tsx`, `ContactForm.tsx`)
+- Files: Match component name exactly
+- Variables: camelCase
+- Constants: UPPER_SNAKE_CASE
+- Interfaces: PascalCase with descriptive names (e.g., `HeroProps`, `ButtonProps`)
+
+## Styling Rules
+
+### Tailwind CSS Only
+- Use Tailwind CSS utility classes exclusively for styling
+- Never add custom CSS classes to `globals.css` (only keep `@import "tailwindcss";`)
+- Use Tailwind's built-in color palette (gray-900, blue-600, etc.)
+- Prefer Tailwind's spacing scale (px-4, mb-8, etc.)
+
+### Responsive Design
+- Always use Tailwind responsive breakpoints: `md:`, `lg:`, `xl:`, `2xl:`
+- Mobile-first approach: base styles for mobile, then add breakpoints for larger screens
+- Example: `text-5xl md:text-6xl` (small on mobile, larger on desktop)
+
+### Common Patterns
+- Use `flex` with `items-center` and `justify-center` for centering
+- Use `space-y-*` for vertical spacing between children
+- Use `min-h-screen` for full-height sections
+- Use gradient backgrounds: `bg-gradient-to-br from-* via-* to-*`
+
+## File Organization
+
+### Directory Structure
+```
+app/
+├── components/     # Reusable React components
+├── page.tsx        # Route pages (App Router)
+├── layout.tsx      # Root layout
+└── globals.css     # Only Tailwind import
+```
+
+### Import Paths
+- Use relative imports for local files: `'./components/Hero'`
+- Use absolute imports with `@/` alias when configured: `'@/components/Hero'`
+- Group imports: external packages first, then local imports
+
+## Code Style
+
+### TypeScript
+- Always define interfaces for props
+- Use `interface` (not `type`) for component props
+- Use `Readonly<>` for props in Next.js layouts when appropriate
+- Enable strict mode in tsconfig.json
+
+### React/Next.js
+- Use arrow functions or regular functions consistently (prefer regular functions for components)
+- Use semantic HTML elements (`<main>`, `<section>`, `<article>`, etc.)
+- Add comments for complex logic or non-obvious code
+- Keep components focused and single-purpose
+
+### JSX
+- Use self-closing tags when possible: `<Hero />` instead of `<Hero></Hero>`
+- Format props on multiple lines when there are 2+ props
+- Use descriptive prop names
+
+## Best Practices
+
+### Before Committing
+- Always check for linter errors: `npm run lint`
+- Ensure TypeScript compiles without errors
+- Test that the dev server runs: `npm run dev`
+
+### Accessibility
+- Use semantic HTML elements
+- Add `alt` text to images
+- Use proper heading hierarchy (h1, h2, h3)
+- Ensure keyboard navigation works
+- Consider ARIA labels when needed
+
+### Performance
+- Use Next.js Image component for images (when needed)
+- Optimize Tailwind classes (avoid redundant classes)
+- Keep components small and focused
+
+## Next.js App Router Specifics
+
+### Pages
+- Use `app/page.tsx` for routes (not `pages/`)
+- Each route needs a `page.tsx` file
+- Use `layout.tsx` for shared layouts
+
+### Metadata
+- Export `metadata` object from `page.tsx` or `layout.tsx`
+- Use Next.js Metadata API for SEO
+
+## Common Patterns in This Project
+
+### Hero Component Pattern
+- Full-screen centered layout
+- Gradient dark background
+- Large typography
+- Call-to-action button
+- Responsive text sizing
+
+### Component Props Pattern
+- Optional props with TypeScript `?`
+- Default values in function parameters
+- Interface defined above component
+
+## Things to Avoid
+
+- ❌ Don't add custom CSS to globals.css (use Tailwind only)
+- ❌ Don't use inline styles (use Tailwind classes)
+- ❌ Don't create components without TypeScript interfaces
+- ❌ Don't use `any` type (use proper types)
+- ❌ Don't mix component styles (keep Tailwind consistent)
+
